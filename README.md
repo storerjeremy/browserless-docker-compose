@@ -1,6 +1,6 @@
-= Browserless Docker Compose
+# Browserless Docker Compose
 
-== Instructions
+## Instructions
 
 1. Clone this repo
 1. Change the BROWSERLESS_TOKEN in the .env file to keep your instance private
