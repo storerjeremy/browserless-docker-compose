@@ -1,0 +1,20 @@
+version: '3'
+services:
+  browserless:
+    image: browserless/chrome:latest
+    environment:
+      - DEBUG=browserless:*
+      - MAX_CONCURRENT_SESSIONS=10
+      - CONNECTION_TIMEOUT=60000
+      - MAX_QUEUE_LENGTH=20
+      - PREBOOT_CHROME=true
+      - DEMO_MODE=false
+      - HOST=0.0.0.0
+      - ENABLE_DEBUGGER=false
+      - TOKEN=${BROWSERLESS_TOKEN}
+      - PORT=3000
+      - WORKSPACE_DELETE_EXPIRED=true
+    container_name: "browserless"
+    restart: always
+    ports:
+      - "3000:3000"
